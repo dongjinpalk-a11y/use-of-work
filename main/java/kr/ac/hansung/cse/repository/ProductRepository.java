@@ -92,7 +92,7 @@ public class ProductRepository {
 
     public List<Product> findByNameContaining(String keyword) {
         return entityManager.createQuery(
-                "SELECT p FROM Product p WHERE p.name LIKE:keyword",
+                "SELECT p FROM Product p LEFT JOIN FETCH p.category WHERE p.name LIKE :keyword",
                 Product.class)
                 .setParameter("keyword", "%" + keyword + "%")
                 .getResultList();

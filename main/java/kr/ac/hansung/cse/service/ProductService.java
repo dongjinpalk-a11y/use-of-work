@@ -3,6 +3,7 @@ package kr.ac.hansung.cse.service;
 import kr.ac.hansung.cse.model.Category;
 import kr.ac.hansung.cse.model.Product;
 import kr.ac.hansung.cse.repository.ProductRepository;
+import kr.ac.hansung.cse.repository.CategoryRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 

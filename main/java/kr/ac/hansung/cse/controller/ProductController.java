@@ -5,6 +5,7 @@ import kr.ac.hansung.cse.exception.ProductNotFoundException;
 import kr.ac.hansung.cse.model.Product;
 import kr.ac.hansung.cse.model.ProductForm;
 import kr.ac.hansung.cse.service.ProductService;
+import kr.ac.hansung.cse.service.CategoryService;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
@@ -50,7 +51,7 @@ public class ProductController {
     // GET /products - 상품 목록 조회
     // ─────────────────────────────────────────────────────────────────
 
-    @GetMapping("/products")
+    @GetMapping
     public String listProducts(
             @RequestParam(required=false) String keyword,
             @RequestParam(required=false) Long categoryId,

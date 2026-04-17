@@ -13,6 +13,7 @@ import java.util.List;
 @ToString(exclude = "products")          // products 제외: 양방향 무한순환 방지
 @NoArgsConstructor(access = AccessLevel.PROTECTED) // JPA 요구 기본 생성자 (외부 직접 생성 방지)
 public class Category {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
